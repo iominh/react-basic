@@ -1,0 +1,15 @@
+# npm
+node_modules
+npm-debug.log
+
+# webpack
+stats.json
+
+# build artifacts
+dist
+
+# mac
+.DS_Store
+
+# intellij
+.idea

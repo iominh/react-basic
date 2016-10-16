@@ -1,0 +1,643 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+
+    // http://eslint.org/docs/user-guide/configuring#specifying-parser-options
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "impliedStrict": true,
+      "globalReturn": false,
+      "jsx": true
+    }
+  },
+
+  // http://eslint.org/docs/user-guide/configuring#specifying-environments
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+
+  // http://eslint.org/docs/user-guide/configuring#specifying-globals
+  "globals": {
+    "document": true,
+    "fetch": true // polyfilled by webpack
+  },
+
+  // http://eslint.org/docs/user-guide/configuring#configuring-plugins
+  "plugins": ["react"],
+
+
+  "rules": {
+
+    // http://eslint.org/docs/rules/#possible-errors
+    "comma-dangle": [
+      0,
+      "never"
+    ],
+    "no-cond-assign": [
+      2,
+      "except-parens"
+    ],
+    "no-console": 1,
+    "no-constant-condition": 0,
+    "no-control-regex": 0,
+    "no-debugger": 1,
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-duplicate-case": 2,
+    "no-empty-character-class": 2,
+    "no-empty": 1,
+    "no-ex-assign": 2,
+    "no-extra-boolean-cast": 0,
+    "no-extra-parens": 0,
+    "no-extra-semi": 2,
+    "no-func-assign": 0,
+    "no-inner-declarations": [
+      2,
+      "both"
+    ],
+    "no-invalid-regexp": 2,
+    "no-irregular-whitespace": 1,
+    "no-negated-in-lhs": 2,
+    "no-obj-calls": 2,
+    "no-regex-spaces": 0,
+    "no-sparse-arrays": 1,
+    "no-unexpected-multiline": 1,
+    "no-unreachable": 1,
+    "no-whitespace-before-property)": 0,
+    "use-isnan": 2,
+    "valid-jsdoc": 0,
+    "valid-typeof": 2,
+
+
+    // http://eslint.org/docs/rules/#best-practices
+    "accessor-pairs": 0,
+    "array-callback-return": 2,
+    "block-scoped-var": 2,
+    "complexity": [
+      1,
+      15
+    ],
+    "consistent-return": 2,
+    "curly": [
+      2,
+      "all"
+    ],
+    "default-case": 2,
+    "dot-location": [
+      2,
+      "property"
+    ],
+    "dot-notation": [
+      2,
+      {
+        "allowKeywords": true
+      }
+    ],
+    "eqeqeq": 2,
+    "guard-for-in": 1,
+    "no-alert": 2,
+    "no-caller": 2,
+    "no-case-declarations": 2,
+    "no-div-regex": 2,
+    "no-else-return": 1,
+    "no-empty-function": 1,
+    "no-empty-pattern": 2,
+    "no-eq-null": 2,
+    "no-eval": 2,
+    "no-extend-native": [
+      2,
+      {
+        "exceptions": []
+      }
+    ],
+    "no-extra-bind": 2,
+    "no-extra-label": 2,
+    "no-fallthrough": 1,
+    "no-floating-decimal": 2,
+    "no-implicit-coercion": [
+      2,
+      {
+        "boolean": false,
+        "number": true,
+        "string": true
+      }
+    ],
+    "no-implied-eval": 2,
+    "no-implicit-globals": 0,
+    "no-invalid-this": 1,
+    "no-iterator": 2,
+    "no-labels": 2,
+    "no-lone-blocks": 1,
+    "no-loop-func": 2,
+    "no-magic-numbers": 0,
+    "no-multi-spaces": 0,
+    "no-multi-str": 1,
+    "no-native-reassign": 2,
+    "no-new-func": 2,
+    "no-new-wrappers": 1,
+    "no-new": 2,
+    "no-octal-escape": 2,
+    "no-octal": 2,
+    "no-param-reassign": 1,
+    "no-process-env": 0,
+    "no-proto": 2,
+    "no-redeclare": 2,
+    "no-return-assign": [
+      2,
+      "except-parens"
+    ],
+    "no-self-assign": 2,
+    "no-script-url": 2,
+    "no-self-compare": 2,
+    "no-sequences": 2,
+    "no-throw-literal": 2,
+    "no-unmodified-loop-condition": 1,
+    "no-unused-expressions": [
+      2,
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "no-unused-labels": 2,
+    "no-useless-call": 1,
+    "no-useless-concat": 2,
+    "no-useless-constructor": 1,
+    "no-void": 2,
+    "no-warning-comments": [
+      0,
+      {
+        "terms": [
+          "todo",
+          "fixme",
+          "note"
+        ],
+        "location": "start"
+      }
+    ],
+    "no-with": 2,
+    "radix": 2,
+    "vars-on-top": 0,
+    "wrap-iife": [
+      2,
+      "inside"
+    ],
+    "yoda": [
+      0,
+      "never"
+    ],
+
+
+    // http://eslint.org/docs/rules/#strict-mode
+    "strict": [
+      2,
+      "global"
+    ],
+
+
+    // http://eslint.org/docs/rules/#variables
+    "init-declarations": [
+      0,
+      "never",
+      {
+        "ignoreForLoopInit": true
+      }
+    ],
+    "no-catch-shadow": 2,
+    "no-delete-var": 2,
+    "no-label-var": 2,
+    "no-shadow-restricted-names": 2,
+    "no-shadow": 2,
+    "no-undef-init": 0,
+    "no-undef": 2,
+    "no-undefined": 0,
+    "no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "args": "after-used"
+      }
+    ],
+    "no-use-before-define": 2,
+
+
+    // http://eslint.org/docs/rules/#nodejs-and-commonjs
+    "callback-return": [
+      1,
+      [
+        "cb",
+        "callback",
+        "next"
+      ]
+    ],
+    "global-require": 1,
+    "handle-callback-err": [
+      1,
+      "^(e|err|error)$"
+    ],
+    "no-mixed-requires": [
+      2,
+      {
+        "grouping": true
+      }
+    ],
+    "no-new-require": 1,
+    "no-path-concat": 1,
+    "no-process-exit": 0,
+    "no-restricted-imports": 0,
+    "no-restricted-modules": 0,
+    "no-sync": 1,
+
+
+    // http://eslint.org/docs/rules/#stylistic-issues
+    //   we could address many of the stylistic concerns with JSCS
+    //   and we can gradually move from 1 (Warning) to 0 or 2
+    "array-bracket-spacing": 0,
+    "block-spacing": 0,
+    "brace-style": 0,
+    "camelcase": [
+      2,
+      {
+        "properties": "never"
+      }
+    ],
+    "comma-spacing": 0,
+    "comma-style": [
+      1,
+      "last"
+    ],
+    "computed-property-spacing": 0,
+    "consistent-this": 0,
+    "eol-last": 2,
+    "func-names": 0,
+    "func-style": [
+      1,
+      "declaration",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "id-blacklist": 0,
+    "id-length": [
+      1,
+      {
+        "min": 1,
+        "max": 40,
+        "properties": "never",
+        "exceptions": []
+      }
+    ],
+    "id-match": 0,
+    "indent": [
+      1,
+      2,
+      {
+        "SwitchCase": 1,
+        "VariableDeclarator": 1
+      }
+    ],
+    "key-spacing": 0,
+    "keyword-spacing": 0,
+    "linebreak-style": [
+      2,
+      "unix"
+    ],
+    "lines-around-comment": 0,
+    "max-depth": [
+      1,
+      3
+    ],
+    "max-len": [
+      2,
+      120
+    ],
+    "max-nested-callbacks": [
+      1,
+      4
+    ],
+    "max-params": [
+      1,
+      4
+    ],
+    "max-statements": 0,
+    "new-cap": 2,
+    "new-parens": 2,
+    "newline-after-var": 0,
+    "newline-per-chained-call": [
+      0,
+      {
+        "ignoreChainWithDepth": 3
+      }
+    ],
+    "no-array-constructor": 2,
+    "no-bitwise": 0,
+    "no-continue": 0,
+    "no-inline-comments": 0,
+    "no-lonely-if": 2,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-multiple-empty-lines": 0,
+    "no-negated-condition": 1,
+    "no-nested-ternary": 2,
+    "no-new-object": 2,
+    "no-plusplus": 0,
+    "no-restricted-syntax": 0,
+    "no-spaced-func": 0,
+    "no-ternary": 0,
+    "no-trailing-spaces": 2,
+    "no-underscore-dangle": [
+      0,
+      {
+        "allow": []
+      }
+    ],
+    "no-unneeded-ternary": 2,
+    "object-curly-spacing": 0,
+    "one-var": [
+      0,
+      "never"
+    ],
+    "one-var-declaration-per-line": [
+      2,
+      "always"
+    ],
+    "operator-assignment": 0,
+    "operator-linebreak": 0,
+    "padded-blocks": 0,
+    "quote-props": [
+      2,
+      "as-needed",
+      {
+        "keywords": false,
+        "unnecessary": false,
+        "numbers": true
+      }
+    ],
+    "quotes": [
+      2,
+      "single",
+      "avoid-escape"
+    ],
+    "require-jsdoc": 0,
+    "semi-spacing": 0,
+    "semi": [
+      2,
+      "always"
+    ],
+    "sort-imports": 0,
+    "sort-vars": 0,
+    "space-before-blocks": 0,
+    "space-before-function-paren": 0,
+    "space-in-parens": 0,
+    "space-infix-ops": 0,
+    "space-unary-ops": 0,
+    "spaced-comment": 0,
+    "wrap-regex": 1,
+    "arrow-body-style": 0,
+    "arrow-parens": [
+      1,
+      "always"
+    ],
+
+
+    // http://eslint.org/docs/rules/#ecmascript-6
+    "arrow-spacing": 0,
+    "constructor-super": 2,
+    "generator-star-spacing": 0,
+    "no-class-assign": 2,
+    "no-confusing-arrow": 2,
+    "no-const-assign": 2,
+    "no-dupe-class-members": 2,
+    "no-new-symbol": 0,
+    "no-this-before-super": 1,
+    "no-var": 2,
+    "object-shorthand": [
+      1,
+      "always"
+    ],
+    "prefer-arrow-callback": 1,
+    "prefer-const": 1,
+    "prefer-reflect": [
+      1,
+      {
+        "exceptions": [
+          "apply",
+          "call",
+          "delete"
+        ]
+      }
+    ],
+    "prefer-rest-params": 1,
+    "prefer-spread": 1,
+    "prefer-template": 0,
+    "require-yield": 2,
+    "template-curly-spacing": 0,
+    "yield-star-spacing": 0,
+
+    "jsx-quotes": [2, "prefer-double"],
+
+    // Prevent missing displayName in a React component definition
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
+    "react/display-name": [0, { ignoreTranspilerName: false }],
+
+    // Forbid certain propTypes (any, array, object)
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
+    "react/forbid-prop-types": [0, { forbid: ["any", "array", "object"] }],
+
+    // Enforce boolean attributes notation in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
+    "react/jsx-boolean-value": [2, "never"],
+
+    // Validate closing bracket location in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
+    "react/jsx-closing-bracket-location": [2, "line-aligned"],
+
+    // Enforce or disallow spaces inside of curly braces in JSX attributes
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
+    "react/jsx-curly-spacing": [2, "never", { allowMultiline: true }],
+
+    // Enforce event handler naming conventions in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
+    "react/jsx-handler-names": [0, {
+      eventHandlerPrefix: "handle",
+      eventHandlerPropPrefix: "on",
+    }],
+
+    // Validate props indentation in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
+    "react/jsx-indent-props": [2, 2],
+
+    // Validate JSX has key prop when in array or iterator
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
+    "react/jsx-key": 0,
+
+    // Limit maximum of props on a single line in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
+    "react/jsx-max-props-per-line": [0, { maximum: 1 }],
+
+    // Prevent usage of .bind() in JSX props
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
+    "react/jsx-no-bind": [2, {
+      ignoreRefs: true,
+      allowArrowFunctions: true,
+      allowBind: false,
+    }],
+
+    // Prevent duplicate props in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
+    "react/jsx-no-duplicate-props": [0, { ignoreCase: false }],
+
+    // Prevent usage of unwrapped JSX strings
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
+    "react/jsx-no-literals": 0,
+
+    // Disallow undeclared variables in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
+    "react/jsx-no-undef": 2,
+
+    // Enforce PascalCase for user-defined JSX components
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
+    "react/jsx-pascal-case": [2, {
+      allowAllCaps: true,
+      ignore: [],
+    }],
+
+    // Enforce propTypes declarations alphabetical sorting
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
+    "react/sort-prop-types": [0, {
+      ignoreCase: false,
+      callbacksLast: false,
+    }],
+
+    // deprecated in favor of react/jsx-sort-props
+    "react/jsx-sort-prop-types": 0,
+
+    // Enforce props alphabetical sorting
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
+    "react/jsx-sort-props": [0, {
+      ignoreCase: false,
+      callbacksLast: false,
+    }],
+
+    // Prevent React to be incorrectly marked as unused
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
+    "react/jsx-uses-react": [2, { pragma: "React" }],
+
+    // Prevent variables used in JSX to be incorrectly marked as unused
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
+    "react/jsx-uses-vars": 2,
+
+    // Prevent usage of dangerous JSX properties
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md
+    "react/no-danger": 0,
+
+    // Prevent usage of deprecated methods
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
+    "react/no-deprecated": [1, { react: "0.14.0" }],
+
+    // Prevent usage of setState in componentDidMount
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
+    "react/no-did-mount-set-state": [2, "allow-in-func"],
+
+    // Prevent usage of setState in componentDidUpdate
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
+    "react/no-did-update-set-state": [2, "allow-in-func"],
+
+    // Prevent direct mutation of this.state
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
+    "react/no-direct-mutation-state": 0,
+
+    // Prevent usage of isMounted
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
+    "react/no-is-mounted": 2,
+
+    // Prevent multiple component definition per file
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
+    "react/no-multi-comp": [2, { ignoreStateless: true }],
+
+    // Prevent usage of setState
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md
+    "react/no-set-state": 0,
+
+    // Prevent using string references
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
+    "react/no-string-refs": 0,
+
+    // Prevent usage of unknown DOM property
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
+    "react/no-unknown-property": 2,
+
+    // Require ES6 class declarations over React.createClass
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
+    "react/prefer-es6-class": [2, "always"],
+
+    // Require stateless functions when not using lifecycle methods, setState or ref
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
+    "react/prefer-stateless-function": 2,
+
+    // Prevent missing props validation in a React component definition
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+    "react/prop-types": [2, { ignore: [], customValidators: [] }],
+
+    // Prevent missing React when using JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
+    "react/react-in-jsx-scope": 2,
+
+    // Restrict file extensions that may be required
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md
+    "react/require-extension": [0, { extensions: [".jsx"] }],
+
+    // Require render() methods to return something
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
+    "react/require-render-return": 2,
+
+    // Prevent extra closing tags for components without children
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
+    "react/self-closing-comp": 2,
+
+    // Enforce spaces before the closing bracket of self-closing JSX elements
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
+//    "react/jsx-space-before-closing": [2, "always"],
+
+    // Enforce component methods order
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
+    "react/sort-comp": [2, {
+      order: [
+        "static-methods",
+        "lifecycle",
+        "/^on.+$/",
+        "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+        "everything-else",
+        "/^render.+$/",
+        "render"
+      ],
+    }],
+
+    // Prevent missing parentheses around multilines JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
+    "react/wrap-multilines": [2, {
+      declaration: true,
+      assignment: true,
+      return: true
+    }],
+
+    // Require that the first prop in a JSX element be on a new line when the element is multiline
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md
+    "react/jsx-first-prop-new-line": [2, "multiline"],
+
+    // enforce spacing around jsx equals signs
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md
+    "react/jsx-equals-spacing": [2, "never"],
+
+    // enforce JSX indentation
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
+    "react/jsx-indent": [2, 2],
+
+    // disallow target="_blank" on links
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
+    // TODO: enable
+    "react/jsx-no-target-blank": 0
+  }
+}
